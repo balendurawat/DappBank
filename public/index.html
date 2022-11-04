@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.8.0/web3.min.js.map"></script>
+    <title>Ethereum Bank</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <h1>Welcome to Ethereum Bank</h1>
+
+
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Tijori Bank</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <span class="collapse navbar-collapse" id = "accountSupportedContent">
+                <span class="ms-auto me-2">
+                    <span class="navbar-text d-none" id="accountaddress"></span>
+                    <button class="btn btn-outline-primary" id="connect_to_metamask">
+                        <i class="fas fa-sign-in-alt pe-1">Log in</i>
+                    </button>
+                </span>
+            </span> 
+          </div>
+        </div>
+      </nav>
+
+
+
+      <div class="row justify-content-center">
+        <div class="col-sm-8 col-lg-6 col-xl-4 border border-5 rounded shadow mt-5 p-5">
+            <h3>Tijori Bank</h3>
+            <hr>
+
+
+            <div class="mt-5 mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Deposit Eth:</label>
+                <input type="email" class="form-control" id="depositeeth" placeholder="0.0002 ETH">
+                <button type="button" class="btn btn-primary" id="depositebutton">Deposit</button>
+              </div>
+
+              <div class="mt-5 mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Withdraw Eth:</label>
+                <input type="email" class="form-control" id="withdraweth" placeholder="0.0002 ETH">
+                <button type="button" class="btn btn-primary" id="withdrawbutton">Withdraw</button>
+              </div>
+              <div class="mt-5 mb-3">
+                <button type="button" class="btn btn-primary" id="getbalance">Get Balance</button>
+                <p class="" id="balance"></p>
+              </div>
+
+
+            </div>
+        </div>
+      </div>
+
+
+
+
+
+
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/v4-shims.min.js" integrity="sha512-sxzP+41Yd4m6g9trbyNp1jJKm9ZuP7pqD5qUN9ik7vkdsrbcKpHCDTDN64DLYF3xrwmDfk2iwUAlSfOl2ACupA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+address public owner;
+mapping(address => uint256) private userbalance;
+constructor() {
+    owner = msg.sender;
+}
+
+modifier onlyOwner() {
+    require(msg.sender == owner, 'you are not the owner of this contract');
+    __;
+}
+
+
+function deposite() public payable returns(bool) {
+    require(msg.value > 10 wei, 'please deposite atleast 10 wei');
+    userbalance[msg.sender] += msg.value;
+    return true;
+}
+
+function withdraw(uint256 _amount) public payable returns(bool) {
+    require( amount <= userbalance[msg.sender] , 'you donot have sufficient funds');
+    userbalance[msg.sender] -= amount;
+    payable(msg.sender).transfer(_amount);
+    return true;
+}
+
+function getbalance() public view returns(uint256) {
+    return userbalance[msg.sender];
+}
+
+
+function getcontractbalance() public payable onlyOwner returns(bool) {
+    return address(this).balance;
+}
+
+
+function withdrawfunds(uint256 _amount) public payable onlyOwner returns(uint256) {
+    payable(owner).transfer(_amount);
+    return true;
+}
+
